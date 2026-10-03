@@ -1,0 +1,153 @@
+/* 学术个人主页样式：简洁、克制、适合打印 */
+:root {
+  --ink: #1f2a37;
+  --muted: #5a6675;
+  --accent: #2c5282;
+  --line: #e3e6ea;
+  --bg: #faf9f7;
+  --card: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- header ---- */
+.site-header {
+  background: var(--ink);
+  color: #fff;
+  padding: 56px 0 36px;
+}
+.site-header .name {
+  font-family: "Noto Serif SC", "SimSun", "Songti SC", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.site-header .school {
+  margin-top: 8px;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+.site-header .tagline {
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 0.92rem;
+}
+.nav {
+  margin-top: 22px;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.nav a {
+  color: #dbe4ef;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav a:hover { color: #fff; border-color: #fff; }
+
+/* ---- sections ---- */
+main { padding: 40px 0 24px; }
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+section h2 {
+  font-family: "Noto Serif SC", "SimSun", "Songti SC", serif;
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+}
+
+/* ---- about ---- */
+.interests {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+.interests li {
+  background: #edf2f7;
+  color: var(--accent);
+  padding: 3px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+/* ---- education & research ---- */
+.item { margin-bottom: 12px; }
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.item-title { font-weight: 600; }
+.item-date { color: var(--muted); font-size: 0.9rem; }
+.item-desc { color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
+
+.paper h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.paper-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin: 4px 0 10px;
+}
+.abstract {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+.method-list {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.method-list li { margin-bottom: 4px; }
+
+/* ---- skills & contact ---- */
+.skill-list, .contact-list {
+  padding-left: 20px;
+}
+.skill-list li, .contact-list li { margin-bottom: 6px; font-size: 0.95rem; }
+.contact-list a { color: var(--accent); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+
+/* ---- footer ---- */
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 20px 0 40px;
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 40px 0 28px; }
+  .site-header .name { font-size: 1.9rem; }
+  section { padding: 22px 20px; }
+}
